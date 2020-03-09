@@ -9,7 +9,7 @@ int main(){
     cin >> pokemon;
 
     switch (pokemon){
-        case (Charmander):
-            cout << "Type: Fire/Flying"; 
+        case Charmander:
+            cout << "Charmander\nType: Fire/Flying"; 
     }
 }
