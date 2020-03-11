@@ -38,6 +38,15 @@ Pokemon whoseThatPokemon(){
         if(name == "Blastoise"){
             return Blastoise;
         }
+        if(name == "Caterpie"){
+            return Caterpie;
+        }
+        if(name == "Metapod"){
+            return Metapod; 
+        }
+        if(name == "Butterfree"){
+            return Butterfree; 
+        }
     }
     if(option == 2){
         cout << "Enter number of Pokemon: ";
@@ -75,40 +84,20 @@ void pokemonInfo(Pokemon poke){
         case Blastoise:
             cout << "Blastoise\nType: Water\n";
             break;
+        case Caterpie:
+            cout << "Caterpie\nType: Bug\n";
+            break; 
+        case Metapod: 
+            cout << "Metapod\nType: Bug\n";
+            break;
+        case Butterfree:
+            cout << "Butterfree\nType: Bug\n";
+            break;
     }
 }
 
 int main(){
     Pokemon pokemon = whoseThatPokemon();
     pokemonInfo(pokemon);
-    // switch (pokemon){
-    //     case Bulbasaur:
-    //         cout << "Bulbasaur\nType: Grass/Poison" << endl; 
-    //         break;
-    //     case Ivysaur:
-    //         cout << "Ivysaur\nType: Grass/Poison\n";
-    //         break;
-    //     case Venasaur:
-    //         cout << "Venasaur\nType: Grass/Poison\n";
-    //         break;
-    //     case Charmander:
-    //         cout << "Charmander\nType: Fire" << endl; 
-    //         break;
-    //     case Charmeleon:
-    //         cout << "Charmeleon\nType: Fire\n";
-    //         break;
-    //     case Charizard:
-    //         cout << "Charizard\nType: Fire/Flying\n";
-    //         break;
-    //     case Squirtle:
-    //         cout << "Squirtle\nType: Water" << endl; 
-    //         break;
-    //     case Wartortle:
-    //         cout << "Wartortle\nType: Water\n";
-    //         break;
-    //     case Blastoise:
-    //         cout << "Blastoise\nType: Water\n";
-    //         break;
-    // }
     return 0;
 }
