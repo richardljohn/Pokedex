@@ -1,39 +1,49 @@
 #include <iostream>
 using namespace std; 
 
-enum Pokemon {Bulbasaur, Ivysaur, Venasaur, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise};
+enum Pokemon {Bulbasaur = 1, Ivysaur, Venasaur, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise};
 
 Pokemon whoseThatPokemon(){
+    int option, number; 
     string name;
-    cout << "Enter the name of the Pokémon you want: "; 
-    cin >> name;
-    if(name == "Bulbasaur"){
-        return Bulbasaur;
+    cout << "Find a Pokémon by Name or Number? (Enter 1 for name. Enter 2 for number.):";
+    cin >> option;
+    if(option == 1){
+         cout << "Enter the name of the Pokémon you want: "; 
+         cin >> name;
+        if(name == "Bulbasaur"){
+            return Bulbasaur;
+        }
+        if(name == "Ivysaur"){
+            return Ivysaur;
+        }
+        if(name == "Venasaur"){
+            return Venasaur;
+        }
+        if(name == "Charmander"){
+            return Charmander;
+        }
+        if(name == "Charmeleon"){
+            return Charmeleon;
+        }
+        if(name == "Charizard"){
+            return Charizard;
+        }
+        if(name == "Squirtle"){
+            return Squirtle;
+        }
+        if(name == "Wartortle"){
+            return Wartortle;
+        }
+        if(name == "Blastoise"){
+            return Blastoise;
+        }
     }
-    if(name == "Ivysaur"){
-        return Ivysaur;
-    }
-    if(name == "Venasaur"){
-        return Venasaur;
-    }
-    if(name == "Charmander"){
-        return Charmander;
-    }
-    if(name == "Charmeleon"){
-        return Charmeleon;
-    }
-    if(name == "Charizard"){
-        return Charizard;
-    }
-    if(name == "Squirtle"){
-        return Squirtle;
-    }
-    if(name == "Wartortle"){
-        return Wartortle;
-    }
-    if(name == "Blastoise"){
-        return Blastoise;
-    }
+    if(option == 2){
+        cout << "Enter number of Pokemon: ";
+        cin >> number;
+        return Pokemon(number);
+    } 
 }
 
 int main(){
