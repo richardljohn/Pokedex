@@ -1,7 +1,13 @@
 #include <iostream>
 using namespace std; 
 
-enum Pokemon {Bulbasaur = 1, Ivysaur, Venasaur, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise, Caterpie, Metapod, Butterfree};
+enum Pokemon {
+Bulbasaur = 1, Ivysaur, Venasaur, 
+Charmander, Charmeleon, Charizard, 
+Squirtle, Wartortle, Blastoise, 
+Caterpie, Metapod, Butterfree,
+Weedle, Kakuna, Beedrill
+};
 
 Pokemon whoseThatPokemon(){
     int option, number; 
@@ -47,6 +53,15 @@ Pokemon whoseThatPokemon(){
         if(name == "Butterfree"){
             return Butterfree; 
         }
+        if(name == "Weedle"){
+            return Weedle;
+        }
+        if(name == "Kakuna"){
+            return Kakuna; 
+        }
+        if(name == "Beedrill"){
+            return Beedrill; 
+        }
     }
     if(option == 2){
         cout << "Enter number of Pokemon: ";
@@ -91,13 +106,28 @@ void pokemonInfo(Pokemon poke){
             cout << "Metapod\nType: Bug\n";
             break;
         case Butterfree:
-            cout << "Butterfree\nType: Bug\n";
+            cout << "Butterfree\nType: Bug/Flying\n";
+            break;
+        case Weedle:
+            cout << "Weedle\nType: Bug\n";
+            break;
+        case Kakuna:
+            cout << "Kakuna\nType: Bug\n";
+            break;
+        case Beedrill:
+            cout << "Beedrill\nTpe: Bug/Poison\n";
             break;
     }
 }
 
 int main(){
-    Pokemon pokemon = whoseThatPokemon();
-    pokemonInfo(pokemon);
+    char repeat;
+    repeat = 'Y';
+    do {
+        Pokemon pokemon = whoseThatPokemon();
+        pokemonInfo(pokemon);
+        cout << "Do you want to look up a Pokemon? (Y)es or (N)o: ";
+        cin >> repeat;
+    } while (repeat == 'Y');
     return 0;
 }
