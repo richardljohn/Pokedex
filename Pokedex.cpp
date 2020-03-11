@@ -12,8 +12,12 @@ Weedle, Kakuna, Beedrill
 Pokemon whoseThatPokemon(){
     int option, number; 
     string name;
-    cout << "Find a Pokémon by Name or Number? (Enter 1 for name. Enter 2 for number.):";
+    cout << "Find a Pokémon by Name or Number? (Enter 1 for name. Enter 2 for number.): ";
     cin >> option;
+    while(option != 1 && option != 2){
+        cout << "Please give a valid method. (Enter 1 for name. Enter 2 for number.): ";
+        cin >> option; 
+    }
     if(option == 1){
          cout << "Enter the name of the Pokémon you want: "; 
          cin >> name;
@@ -61,6 +65,9 @@ Pokemon whoseThatPokemon(){
         }
         if(name == "Beedrill"){
             return Beedrill; 
+        }
+        else{
+            cout << "Not a Pokemon." << endl;
         }
     }
     if(option == 2){
