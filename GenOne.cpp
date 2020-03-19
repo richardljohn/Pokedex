@@ -37,10 +37,22 @@ void GenOne::displayNum(Pokemon array[], int dexNum){
 }
 
 void GenOne::displayName(Pokemon array[], string name){
-
+    string two, select;
+    int target; 
+    select = name; 
+    for(int i = 0; i < 50; i++){
+        if(array[i].type2 == "None"){
+            two = "";
+        } 
+        else {
+            two = array[i].type2;
+        }
+        if(array[i].name == name){
+            cout << array[i].num << '\t' << array[i].name << '\n' << array[i].type << "/" << two << endl;
+        }
 }
 
-void GenOne::choice(){
+void GenOne::selection(){
     int decision; 
     cout << "Would you like to search by name or number? (Enter 1 for name. Enter 2 for number): ";
     cin >> decision;

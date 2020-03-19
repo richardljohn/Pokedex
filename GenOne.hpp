@@ -20,5 +20,5 @@ class GenOne {
         void displayName(Pokemon array[], string name);
         int getNum();
         void getName();
-        void choice();
+        void selection();
 };
