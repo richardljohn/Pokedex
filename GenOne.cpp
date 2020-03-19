@@ -12,6 +12,20 @@ void GenOne::openFile(string file, Pokemon array[]){
     gen1.close();
 }
 
+int GenOne::getNum(){
+    int pick;
+    cout << "Enter the number of the Pokémon you want: ";
+    cin >> pick;
+    return pick;
+}
+
+void GenOne::getName(){
+    string pick;
+    cout << "Enter the name of the Pokémon you want: ";
+    cin >> pick;
+    cout << pick;
+}
+
 void GenOne::displayNum(Pokemon array[], int dexNum){
     string two;
     if(array[dexNum].type2 == "None"){
@@ -31,10 +45,10 @@ void GenOne::choice(){
     cout << "Would you like to search by name or number? (Enter 1 for name. Enter 2 for number): ";
     cin >> decision;
     if(decision == 1){
-        
+        getName();
     }
     if(decision == 2){
-        
+        getNum();
     }
 }
 

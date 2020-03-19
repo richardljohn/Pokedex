@@ -18,5 +18,7 @@ class GenOne {
         void openFile(string file, Pokemon array[]);
         void displayNum(Pokemon array[], int dexNum);
         void displayName(Pokemon array[], string name);
+        int getNum();
+        void getName();
         void choice();
 };
