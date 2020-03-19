@@ -16,5 +16,7 @@ struct Pokemon {
 class GenOne {
     public: 
         void openFile(string file, Pokemon array[]);
-        void display(Pokemon array[]);
+        void displayNum(Pokemon array[], int dexNum);
+        void displayName(Pokemon array[], string name);
+        void choice();
 };
