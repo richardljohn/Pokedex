@@ -2,13 +2,13 @@
 #include "GenOne.hpp"
 using namespace std; 
 
-int main(){
-    Pokemon arr[50];
-    GenOne Pokedex;
-    Pokedex.openFile("GenerationOne.txt", arr);
-    Pokedex.display(arr);
-    return 0;
-}
+// int main(){
+//     Pokemon arr[50];
+//     GenOne Pokedex;
+//     Pokedex.openFile("GenerationOne.txt", arr);
+//     Pokedex.display(arr);
+//     return 0;
+// }
 
 // enum Pokemon {
 // Bulbasaur = 1, Ivysaur, Venasaur, 

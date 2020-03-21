@@ -1,6 +1,7 @@
 //Generation One
 
 #pragma once 
+#include "ArrayBag.hpp"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -13,12 +14,11 @@ struct Pokemon {
     string type2;
 };
 
-class GenOne {
+class GenOne: public ArrayBag<Pokemon> {
     public: 
         void openFile(string file, Pokemon array[]);
         void displayNum(Pokemon array[], int dexNum);
         void displayName(Pokemon array[], string name);
         int getNum();
         void getName();
-        void selection();
 };
