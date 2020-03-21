@@ -44,7 +44,7 @@ ZooRecord::ZooRecord(std::string input_file_name):ArrayBag(){
         getline(ss, milk, ',');
         getline(ss, airborne, ',');
         getline(ss, aquatic, ',');
-        getline(ss, predator, ',');
+        getline(ss, predator, ','); 
         getline(ss, toothed, ',');
         getline(ss, backbone, ',');
         getline(ss, breathes, ',');
