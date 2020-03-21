@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <climits>
+#include <sstream>
 using namespace std; 
 
 struct Pokemon {
@@ -17,6 +19,8 @@ struct Pokemon {
 class GenOne: public ArrayBag<Pokemon> {
     public: 
         GenOne();
+        GenOne(string file);
+        void display(int way);
         void openFile(string file);
         void displayNum(int dexNum);
         void displayName(string name);

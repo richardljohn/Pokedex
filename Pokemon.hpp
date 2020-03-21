@@ -12,8 +12,8 @@ class Pokemon {
         int getNum();
 
     private: 
-        string name; 
-        int num; 
-        string type;
-        string type2;
+        string name_; 
+        int num_; 
+        string type_;
+        string type2_;
 };

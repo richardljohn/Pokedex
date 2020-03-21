@@ -88,7 +88,7 @@ public:
     void operator /=(const ArrayBag<T>& a_bag); 
 
 protected:
-    static const int DEFAULT_CAPACITY = 200;  //max size of items_
+    static const int DEFAULT_CAPACITY = 1100;  //max size of items_
     T items_[DEFAULT_CAPACITY];              // Array of bag items
     int item_count_;                         // Current count of bag items
     

@@ -2,6 +2,29 @@
 
 #include "GenOne.hpp"
 
+GenOne::GenOne():ArrayBag(){
+
+}
+
+GenOne::GenOne(string file):ArrayBag(){
+    string junk, currLine, number, name, type, typetwo;
+    ifstream fin(file);
+    if (fin.fail()){
+        cerr << "File cannot be opened. :(" << endl;
+        exit(1);
+    }
+
+    getline(fin, junk);
+    while(getline(fin, currLine)){
+        stringstream ss(currLine);
+        getline(ss, number, ',');
+        getline(ss, name, ',');
+        getline(ss, type, ',');
+        getline(ss, typetwo, ',');
+        add();
+    }
+}
+
 // void GenOne::openFile(string file, Pokemon array[]){
 //     fstream gen1;
 //     int i = 0; 
