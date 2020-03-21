@@ -1,6 +1,8 @@
 //Generation One 
 
 #include "GenOne.hpp"
+#include "ArrayBag.hpp"
+#include "Pokemon.hpp"
 
 GenOne::GenOne():ArrayBag(){
 
@@ -21,7 +23,17 @@ GenOne::GenOne(string file):ArrayBag(){
         getline(ss, name, ',');
         getline(ss, type, ',');
         getline(ss, typetwo, ',');
-        add();
+
+        int dexNum; 
+        dexNum = stoi(number);
+        add(Pokemon(name, dexNum, type, typetwo));
+    }
+    fin.close();
+}
+
+void GenOne::display(){
+    for(int i = 0; i <= item_count_-1; i++){
+        items_[i].display();
     }
 }
 

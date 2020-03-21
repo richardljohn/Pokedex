@@ -2,6 +2,11 @@
 #include "GenOne.hpp"
 using namespace std; 
 
+int main(){
+    GenOne Gen1;
+    Gen1.display();
+}
+
 // int main(){
 //     Pokemon arr[50];
 //     GenOne Pokedex;
