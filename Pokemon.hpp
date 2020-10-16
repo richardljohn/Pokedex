@@ -7,17 +7,25 @@ class Pokemon {
     public: 
         Pokemon();
         Pokemon(string nam, int nu, string typ, string typt);
-        string getName();
-        string getType();
-        string getType2();
-        int getNum();
+        string getName() const ;
+        string getType() const;
+        string getType2() const ;
+        int getNum() const ;
+        void setName(string nam);
+        void setType(string typ);
+        void setType2(string type);
+        void setNum(int nu);
+        void displayByNum(int num);
         void display();
-        void displayN();
-        bool hasSecond();
+        void displayByName(string name_);
+        bool hasSecond() const;
+        bool operator==(const Pokemon& P1) const; 
 
     private: 
-        string name_; 
-        int num_; 
-        string type_;
-        string type2_;
+        string name; 
+        int dexNum; 
+        string type;
+        string type2;
 };
+
+#include "Pokemon.cpp"

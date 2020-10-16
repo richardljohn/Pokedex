@@ -1,61 +1,81 @@
-#include "ArrayBag.hpp"
-#include "GenOne.hpp"
 #include "Pokemon.hpp"
 
-// Pokemon::Pokemon(){
-    
-// }
-
-Pokemon::Pokemon(string nam, int nu, string typ, string typt){
-    name_ = nam;
-    num_ = nu;
-    type_ = typ;
-    type2_ = typt;
+Pokemon::Pokemon(){
+    name = "";
+    dexNum = 0;
+    type = "";
+    type2 = "";
 }
 
-string Pokemon::getName(){
-     return name_;
+Pokemon::Pokemon(string name, int num, string type, string typ2){
+    this->name = name;
+    this->dexNum = num;
+    this->type = type;
+    this->type2 = type2;
 }
 
-string Pokemon::getType(){
-    return type_;
+string Pokemon::getName()const {
+     return name;
 }
 
-string Pokemon::getType2(){
-    return type2_; 
+string Pokemon::getType() const {
+    return type;
 }
 
-int Pokemon::getNum(){
-    return num_; 
+string Pokemon::getType2() const{
+    if(hasSecond() == false){
+        return "";
+    } 
+    return type2; 
 }
 
-bool Pokemon::hasSecond(){
-    if(type2_ == "None"){
+int Pokemon::getNum()const {
+    return dexNum; 
+}
+
+void Pokemon::setName(string nam){
+    name = nam;
+}
+
+void Pokemon::setType(string typ){
+    type = typ;
+}
+
+void Pokemon::setType2(string type) {
+    type2 = type;
+}
+
+void Pokemon::setNum(int nu){
+    dexNum = nu;
+}
+
+bool Pokemon::hasSecond() const{
+    if(type2 == "None"){
         return false;
-    }
-    else{
+    } else {
         return true; 
     }
 }
 
 void Pokemon::display(){
-    string second;
-    if(hasSecond()){
-        second == type2_;
+    string slash;
+    if(getType2() == ""){
+        slash = "";
+    } else {
+        slash = "/";
     }
-    else{
-        second == "";
-    }
-    cout << name_ << "\t" << num_ << "\t" << type_ << "\t" << second << endl;
+    cout << getNum() << ". " << getName() << "\t" << getType() << slash << getType2() << endl;
 }
 
-void Pokemon::displayN(){
-    string second;
-    if(hasSecond()){
-        second == type2_;
-    }
-    else{
-        second == "";
-    }
-    cout << num_ << "\t" << name_ << "\t" << type_ << "\t" << second << endl;
+bool Pokemon::operator==(const Pokemon& P1) const{
+    return ( getName() == P1.getName() && getNum() == P1.getNum() && getType() == P1.getType() && getType2() == P1.getType2());
+}
+
+
+void Pokemon::displayByNum(int num){
+    cout << getName() << "\t" << getNum() << "\t" << getType() << "\t" << getType2() << endl;
+}
+
+void Pokemon::displayByName(string name){
+    cout << getName() << "\t" << getNum() << "\t" << getType() << "\t" << getType2() << endl;
 }
