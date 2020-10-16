@@ -15,10 +15,9 @@ class Pokemon {
         void setType(string typ);
         void setType2(string type);
         void setNum(int nu);
-        void displayByNum(int num);
+        // void displayByNum(int num);
         void display();
-        void displayByName(string name_);
-        bool hasSecond() const;
+        // void displayByName(string name_);
         bool operator==(const Pokemon& P1) const; 
 
     private: 

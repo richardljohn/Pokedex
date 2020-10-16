@@ -11,7 +11,7 @@ Pokemon::Pokemon(string name, int num, string type, string typ2){
     this->name = name;
     this->dexNum = num;
     this->type = type;
-    this->type2 = type2;
+    this->type2 = typ2;
 }
 
 string Pokemon::getName()const {
@@ -23,10 +23,7 @@ string Pokemon::getType() const {
 }
 
 string Pokemon::getType2() const{
-    if(hasSecond() == false){
-        return "";
-    } 
-    return type2; 
+    return type2;
 }
 
 int Pokemon::getNum()const {
@@ -49,20 +46,14 @@ void Pokemon::setNum(int nu){
     dexNum = nu;
 }
 
-bool Pokemon::hasSecond() const{
-    if(type2 == "None"){
-        return false;
-    } else {
-        return true; 
-    }
-}
-
 void Pokemon::display(){
-    string slash;
-    if(getType2() == ""){
+    string slash = "/";
+    if(getType2() == "None"){
         slash = "";
+        type2 = "";
     } else {
         slash = "/";
+        type2 = getType2();
     }
     cout << getNum() << ". " << getName() << "\t" << getType() << slash << getType2() << endl;
 }
@@ -71,11 +62,10 @@ bool Pokemon::operator==(const Pokemon& P1) const{
     return ( getName() == P1.getName() && getNum() == P1.getNum() && getType() == P1.getType() && getType2() == P1.getType2());
 }
 
+// void Pokemon::displayByNum(int num){
+//     cout << getName() << "\t" << getNum() << "\t" << getType() << "\t" << getType2() << endl;
+// }
 
-void Pokemon::displayByNum(int num){
-    cout << getName() << "\t" << getNum() << "\t" << getType() << "\t" << getType2() << endl;
-}
-
-void Pokemon::displayByName(string name){
-    cout << getName() << "\t" << getNum() << "\t" << getType() << "\t" << getType2() << endl;
-}
+// void Pokemon::displayByName(string name){
+//     cout << getName() << "\t" << getNum() << "\t" << getType() << "\t" << getType2() << endl;
+// }
