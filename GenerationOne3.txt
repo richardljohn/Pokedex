@@ -19,7 +19,7 @@
 119	Seaking	Water	None
 120	Staryu	Water	None
 121	Starmie	Water	Psychic
-122	Mr. Mime	Psychic	Fairy
+122	Mr.Mime	Psychic	Fairy
 123	Scyther	Bug	Flying
 124	Jynx	Ice	Psychic
 125	Electabuzz	Electric	None

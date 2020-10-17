@@ -1,3 +1,8 @@
+/*
+Name: Richard John
+File: Pokémon.hpp
+*/
+
 #pragma once 
 #include <iostream>
 #include <string>

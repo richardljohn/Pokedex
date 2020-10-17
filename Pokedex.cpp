@@ -3,7 +3,6 @@ Name: Richard John
 File: Pokédex.cpp
 */
 
-
 #include "Pokedex.hpp"
 
 void Pokedex::loadDex(string filename){
@@ -25,19 +24,12 @@ void Pokedex::loadDex(string filename){
 
 void Pokedex::showDex(){ 
     DexCopy = toVector();
-    for(int i = 0; i < getCurrentSize()-1; i++){
+    for(int i = 0; i < getCurrentSize(); i++){
         DexCopy.at(i).display();
     }
 }
 
 void Pokedex::deleteDex(){
-    int size = getCurrentSize()-1;
-    for(int i = 0; i < getCurrentSize()-1; i++){
-        if(contains(Pokemon(DexCopy.at(i).getName(), DexCopy.at(i).getNum(), DexCopy.at(i).getType(), DexCopy.at(i).getType2()))) {
-            remove(Pokemon(DexCopy.at(i).getName(), DexCopy.at(i).getNum(), DexCopy.at(i).getType(), DexCopy.at(i).getType2()));
-        }
-    }
-    for(int i = 0; i < size; i++){
-        DexCopy.pop_back();
-    }
+    clear();
+    DexCopy.clear();
 }

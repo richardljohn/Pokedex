@@ -1,3 +1,8 @@
+/*
+Name: Richard John
+File: Pokémon.cpp
+*/
+
 #include "Pokemon.hpp"
 
 Pokemon::Pokemon(){
